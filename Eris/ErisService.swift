@@ -10,13 +10,13 @@ import Foundation
 
 // This is the top level access
 public class ErisService {
-	static let shared = ErisService()
+	public static let shared = ErisService()
 	
 	public var store: ErisStore?
 	
 	fileprivate init() {}
 	
-	func report(_ message: CustomStringConvertible, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
+	public func report(_ message: CustomStringConvertible, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
 		store?.store(message, file: file, function: function, line: line)
 	}
 }
