@@ -14,9 +14,13 @@ public class ErisService {
 	
 	public var store: ErisStore?
 	
+	public struct Name {
+		public let value: String
+	}
+	
 	fileprivate init() {}
 	
-	public func report(_ message: CustomStringConvertible, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-		store?.store(message, file: file, function: function, line: line)
+	public func report(_ type: ErisService.Name, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
+		store?.store(type, file: file, function: function, line: line)
 	}
 }

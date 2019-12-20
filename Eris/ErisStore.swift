@@ -11,7 +11,7 @@ import Foundation
 // This represents a delegate for store errors passed to the Eris service
 public protocol ErisStore {
 
-	func store(_ error: CustomStringConvertible,
+	func store(_ type: ErisService.Name,
 						 file: StaticString,
 						 function: StaticString,
 						 line: UInt)
