@@ -12,6 +12,7 @@ import Foundation
 public protocol ErisStore {
 
 	func store(_ type: ErisService.Name,
+						 info: [String: String]?,
 						 file: StaticString,
 						 function: StaticString,
 						 line: UInt)

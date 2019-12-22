@@ -24,7 +24,7 @@ public class ErisService {
 	
 	fileprivate init() {}
 	
-	public func report(_ type: ErisService.Name, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-		store?.store(type, file: file, function: function, line: line)
+	public func report(_ type: ErisService.Name, info: [String:String]? = nil, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
+		store?.store(type, info: info, file: file, function: function, line: line)
 	}
 }
